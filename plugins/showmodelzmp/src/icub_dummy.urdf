@@ -1,0 +1,949 @@
+<?xml version="1.0" ?>
+<robot name="iCub">
+  <joint name="iCub__l_hip_pitch" type="revolute">
+    <parent link="iCub__root_link"/>
+    <child link="iCub__l_hip_1"/>
+    <origin rpy="0       1.57079 -0.00159" xyz="1.00000000e-04   6.80900000e-02   4.80100000e-01"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="84.0" lower="-0.767945" upper="2.30383" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_hip_roll" type="revolute">
+    <parent link="iCub__l_hip_1"/>
+    <child link="iCub__l_hip_2"/>
+    <origin rpy="1.20394 -1.57079  1.93764" xyz="0  0  0"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="84.0" lower="-0.296706" upper="2.07694" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_leg_ft_sensor" type="fixed">
+    <parent link="iCub__l_hip_2"/>
+    <child link="iCub__l_hip_3"/>
+    <origin rpy="0  0  0" xyz="0      0      0.0665"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="iCub__l_hip_yaw" type="revolute">
+    <parent link="iCub__l_hip_3"/>
+    <child link="iCub__l_upper_leg"/>
+    <origin rpy="-1.5708  0      0" xyz="0      0     -0.0665"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="40.0" lower="-1.37881" upper="1.37881" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_knee" type="revolute">
+    <parent link="iCub__l_upper_leg"/>
+    <child link="iCub__l_lower_leg"/>
+    <origin rpy="3.14159  0       1.5708" xyz="0     -0.2236  0"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="30.0" lower="-2.18166" upper="0.401426" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_ankle_pitch" type="revolute">
+    <parent link="iCub__l_lower_leg"/>
+    <child link="iCub__l_ankle_1"/>
+    <origin rpy="-1.5708  0      0" xyz="-0.213  0     0"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="24.0" lower="-0.733038" upper="0.366519" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_ankle_roll" type="revolute">
+    <parent link="iCub__l_ankle_1"/>
+    <child link="iCub__l_ankle_2"/>
+    <origin rpy="-2.64933 -1.57078  2.64933" xyz="0  0  0"/>
+    <axis xyz="1  0  0"/>
+    <limit effort="11.0" lower="-0.418879" upper="0.418879" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_foot_ft_sensor" type="fixed">
+    <parent link="iCub__l_ankle_2"/>
+    <child link="iCub__l_foot"/>
+    <origin rpy="0  0  0" xyz="0     0     0.037"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="iCub__r_hip_pitch" type="revolute">
+    <parent link="iCub__root_link"/>
+    <child link="iCub__r_hip_1"/>
+    <origin rpy="3.14159000e+00   1.57079000e+00  -1.59000000e-03" xyz="-1.00000000e-04  -6.80900000e-02   4.80100000e-01"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="84.0" lower="-0.767945" upper="2.30383" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_hip_roll" type="revolute">
+    <parent link="iCub__r_hip_1"/>
+    <child link="iCub__r_hip_2"/>
+    <origin rpy="1.93764  1.57079  1.93764" xyz="0  0  0"/>
+    <axis xyz="-1  0  0"/>
+    <limit effort="84.0" lower="-0.296706" upper="2.07694" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_leg_ft_sensor" type="fixed">
+    <parent link="iCub__r_hip_2"/>
+    <child link="iCub__r_hip_3"/>
+    <origin rpy="0  0  0" xyz="0      0      0.0665"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="iCub__r_hip_yaw" type="revolute">
+    <parent link="iCub__r_hip_3"/>
+    <child link="iCub__r_upper_leg"/>
+    <origin rpy="-1.5708  0      0" xyz="0      0     -0.0665"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="40.0" lower="-1.37881" upper="1.37881" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_knee" type="revolute">
+    <parent link="iCub__r_upper_leg"/>
+    <child link="iCub__r_lower_leg"/>
+    <origin rpy="3.14158  0       1.5708" xyz="0     -0.2236  0"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="30.0" lower="-2.18166" upper="0.401426" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_ankle_pitch" type="revolute">
+    <parent link="iCub__r_lower_leg"/>
+    <child link="iCub__r_ankle_1"/>
+    <origin rpy="1.5708  0      0" xyz="-0.213  0     0"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="24.0" lower="-0.733038" upper="0.366519" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_ankle_roll" type="revolute">
+    <parent link="iCub__r_ankle_1"/>
+    <child link="iCub__r_ankle_2"/>
+    <origin rpy="-0.67357  1.57079  2.46801" xyz="0  0  0"/>
+    <axis xyz="-1  0  0"/>
+    <limit effort="11.0" lower="-0.418879" upper="0.418879" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_foot_ft_sensor" type="fixed">
+    <parent link="iCub__r_ankle_2"/>
+    <child link="iCub__r_foot"/>
+    <origin rpy="0  0  0" xyz="0     0     0.037"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="iCub__torso_pitch" type="revolute">
+    <parent link="iCub__root_link"/>
+    <child link="iCub__torso_1"/>
+    <origin rpy="3.14159 -1.57079  3.13999" xyz="0   0   0.6"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="36.0" lower="-0.383972" upper="1.46608" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__torso_roll" type="revolute">
+    <parent link="iCub__torso_1"/>
+    <child link="iCub__torso_2"/>
+    <origin rpy="1.57079  0      -1.5708" xyz="0.032  0     0"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="80.0" lower="-0.680678" upper="0.680678" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__torso_yaw" type="revolute">
+    <parent link="iCub__torso_2"/>
+    <child link="iCub__chest"/>
+    <origin rpy="-1.57079  0      -1.5708" xyz="0     -0.0055  0"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="80.0" lower="-1.02974" upper="1.02974" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_shoulder_pitch" type="revolute">
+    <parent link="iCub__chest"/>
+    <child link="iCub__l_shoulder_1"/>
+    <origin rpy="1.30899  0       1.57079" xyz="0.00525  0.1433  -0.11026"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="84.0" lower="-1.65806" upper="0.0872665" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_shoulder_roll" type="revolute">
+    <parent link="iCub__l_shoulder_1"/>
+    <child link="iCub__l_shoulder_2"/>
+    <origin rpy="1.5708   0      -1.57079" xyz="0  0  0"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="84.0" lower="0.0" upper="2.80649" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_shoulder_yaw" type="revolute">
+    <parent link="iCub__l_shoulder_2"/>
+    <child link="iCub__l_shoulder_3"/>
+    <origin rpy="0     0     1.309" xyz="0  0  0"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="34.0" lower="-0.645772" upper="1.74533" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_arm_ft_sensor" type="fixed">
+    <parent link="iCub__l_shoulder_3"/>
+    <child link="iCub__l_upper_arm"/>
+    <origin rpy="0  0  0" xyz="0.015  0     0.068"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="iCub__l_elbow" type="revolute">
+    <parent link="iCub__l_upper_arm"/>
+    <child link="iCub__l_elbow_1"/>
+    <origin rpy="0  0  0" xyz="0       0       0.08428"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="20.0" lower="0.0959931" upper="1.85005" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_wrist_prosup" type="revolute">
+    <parent link="iCub__l_elbow_1"/>
+    <child link="iCub__l_forearm"/>
+    <origin rpy="1.57079  0      -1.5708" xyz="-0.015  0     0"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="0.45" lower="-0.872665" upper="0.872665" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_wrist_pitch" type="revolute">
+    <parent link="iCub__l_forearm"/>
+    <child link="iCub__l_wrist_1"/>
+    <origin rpy="1.5708   0       1.57079" xyz="0      0.1373  0"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="0.65" lower="-1.13446" upper="0.174533" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__l_wrist_yaw" type="revolute">
+    <parent link="iCub__l_wrist_1"/>
+    <child link="iCub__l_hand"/>
+    <origin rpy="0  0  0" xyz="0  0  0"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="0.65" lower="-0.436332" upper="0.436332" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__neck_pitch" type="revolute">
+    <parent link="iCub__chest"/>
+    <child link="iCub__neck_1"/>
+    <origin rpy="1.57079  0       1.57079" xyz="0.00231  0.1933   0"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="20.0" lower="-0.523599" upper="0.383972" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__neck_roll" type="revolute">
+    <parent link="iCub__neck_1"/>
+    <child link="iCub__neck_2"/>
+    <origin rpy="-1.5708  0     -1.5708" xyz="0.0095  0      0"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="20.0" lower="-0.349066" upper="0.349066" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__neck_yaw" type="revolute">
+    <parent link="iCub__neck_2"/>
+    <child link="iCub__head"/>
+    <origin rpy="-1.5708   0       1.57079" xyz="0  0  0"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="20.0" lower="-0.767945" upper="0.767945" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__eyes_tilt" type="revolute">
+    <parent link="iCub__head"/>
+    <child link="iCub__eyes_tilt_link"/>
+    <origin rpy="3.14159000e+00   0.00000000e+00  -1.00000000e-05" xyz="-0.055   -0.10599  0"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="84.0" lower="-1.5708" upper="1.5708" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__left_eye" type="revolute">
+    <parent link="iCub__eyes_tilt_link"/>
+    <child link="iCub__left_eye_link"/>
+    <origin rpy="1.5708  0      0" xyz="0     0     0.034"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="84.0" lower="-1.5708" upper="1.5708" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__right_eye" type="revolute">
+    <parent link="iCub__eyes_tilt_link"/>
+    <child link="iCub__right_eye_link"/>
+    <origin rpy="1.5708  0      0" xyz="0     0    -0.034"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="84.0" lower="-1.5708" upper="1.5708" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_shoulder_pitch" type="revolute">
+    <parent link="iCub__chest"/>
+    <child link="iCub__r_shoulder_1"/>
+    <origin rpy="-1.30899  0       1.57079" xyz="0.00525  0.1433   0.11025"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="84.0" lower="-1.65806" upper="0.0872665" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_shoulder_roll" type="revolute">
+    <parent link="iCub__r_shoulder_1"/>
+    <child link="iCub__r_shoulder_2"/>
+    <origin rpy="-1.57079  0      -1.57079" xyz="0  0  0"/>
+    <axis xyz="0 -1  0"/>
+    <limit effort="84.0" lower="0.0" upper="2.80649" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_shoulder_yaw" type="revolute">
+    <parent link="iCub__r_shoulder_2"/>
+    <child link="iCub__r_shoulder_3"/>
+    <origin rpy="3.14158  0       1.309" xyz="0  0  0"/>
+    <axis xyz="0  0 -1"/>
+    <limit effort="34.0" lower="-0.645772" upper="1.74533" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_arm_ft_sensor" type="fixed">
+    <parent link="iCub__r_shoulder_3"/>
+    <child link="iCub__r_upper_arm"/>
+    <origin rpy="0  0  0" xyz="0.015  0     0.068"/>
+    <axis xyz="0  0  0"/>
+    <limit effort="0.0" lower="0.0" upper="0.0" velocity="0.0"/>
+  </joint>
+  <joint name="iCub__r_elbow" type="revolute">
+    <parent link="iCub__r_upper_arm"/>
+    <child link="iCub__r_elbow_1"/>
+    <origin rpy="3.14158  0       3.14159" xyz="0       0       0.08428"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="20.0" lower="0.0959931" upper="1.85005" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_wrist_prosup" type="revolute">
+    <parent link="iCub__r_elbow_1"/>
+    <child link="iCub__r_forearm"/>
+    <origin rpy="1.57079  0      -1.5708" xyz="0.015  0     0"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="0.45" lower="-0.872665" upper="0.872665" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_wrist_pitch" type="revolute">
+    <parent link="iCub__r_forearm"/>
+    <child link="iCub__r_wrist_1"/>
+    <origin rpy="1.5708   0       1.57079" xyz="0     -0.1373  0"/>
+    <axis xyz="0  1  0"/>
+    <limit effort="0.65" lower="-1.13446" upper="0.174533" velocity="100.0"/>
+  </joint>
+  <joint name="iCub__r_wrist_yaw" type="revolute">
+    <parent link="iCub__r_wrist_1"/>
+    <child link="iCub__r_hand"/>
+    <origin rpy="0       0       3.14159" xyz="0  0  0"/>
+    <axis xyz="0  0  1"/>
+    <limit effort="0.65" lower="-0.436332" upper="0.436332" velocity="100.0"/>
+  </joint>
+
+
+  <link name="iCub__root_link">
+    
+    <collision name="iCub__root_link_collision">
+      <origin rpy="0    0    3.14" xyz="0   0   0.6"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_root_link.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__root_link_visual">
+      <origin rpy="0    0    3.14" xyz="0   0   0.6"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_root_link.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+
+
+  <!-- KDL can't have inertia on the base_link, so move it to this separate link. -->
+  <link name="iCub__root_inertia">
+    <inertial>
+      <mass value="4.72"/>
+      <origin rpy="0    0    3.14" xyz="0   0   0.6"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <joint name="iCub__root_inertia_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <parent link="iCub__root_link" />
+    <child link="iCub__root_inertia" />
+  </joint>
+
+
+
+  <link name="iCub__l_hip_1">
+    <inertial>
+      <mass value="0.754"/>
+      <origin rpy="0  0  0" xyz="0     -0.0782  0"/>
+      <inertia ixx="0.01" ixy="2.059e-06" ixz="1.451e-06" iyy="0.01" iyz="1.545e-06" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_hip_1_collision">
+      <origin rpy="-0.7854   1.57079 -2.35618" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_hip_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_hip_1_visual">
+      <origin rpy="-0.7854   1.57079 -2.35618" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_hip_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_hip_2">
+    <inertial>
+      <mass value="0.526"/>
+      <origin rpy="0  0  0" xyz="0       0       0.03045"/>
+      <inertia ixx="0.01" ixy="-7.4e-08" ixz="1.0835e-05" iyy="0.01" iyz="-6.2e-08" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_hip_2_collision">
+      <origin rpy="0.78536 -1.57079  2.35623" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_hip_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_hip_2_visual">
+      <origin rpy="0.78536 -1.57079  2.35623" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_hip_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_hip_3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__l_upper_leg">
+    <inertial>
+      <mass value="2.175"/>
+      <origin rpy="0  0  0" xyz="0.00144 -0.15942 -0.00039"/>
+      <inertia ixx="0.01" ixy="-6.726e-05" ixz="2.267e-06" iyy="0.01" iyz="3.63726e-05" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_upper_leg_collision">
+      <origin rpy="-2.67797  1.57079 -1.10715" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_thigh.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_upper_leg_visual">
+      <origin rpy="-2.67797  1.57079 -1.10715" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_thigh.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_lower_leg">
+    <inertial>
+      <mass value="1.264"/>
+      <origin rpy="0  0  0" xyz="-0.1071   0.00182  0.00211"/>
+      <inertia ixx="0.01" ixy="-0.000185699" ixz="-6.3147e-05" iyy="0.01" iyz="7.86e-07" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_lower_leg_collision">
+      <origin rpy="-3.14159  0       1.5708" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_shank.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_lower_leg_visual">
+      <origin rpy="-3.14159  0       1.5708" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_shank.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_ankle_1">
+    <inertial>
+      <mass value="0.746"/>
+      <origin rpy="0  0  0" xyz="-0.0054   0.00163  0.0172"/>
+      <inertia ixx="0.01" ixy="-7.081e-06" ixz="4.1421e-05" iyy="0.01" iyz="2.0817e-05" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_ankle_1_collision">
+      <origin rpy="1.5708  0      0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_ankle_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_ankle_1_visual">
+      <origin rpy="1.5708  0      0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_ankle_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_ankle_2">
+    <inertial>
+      <mass value="0.2675"/>
+      <origin rpy="0  0  0" xyz="0     0     0.037"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__l_foot">
+    <inertial>
+      <mass value="0.5935"/>
+      <origin rpy="0  0  0" xyz="0.02406 -0.00061 -0.02841"/>
+      <inertia ixx="0.01" ixy="-4.51893e-06" ixz="0.000567785" iyy="0.01" iyz="-6.62361e-07" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_foot_collision">
+      <origin rpy="0  0  0" xyz="0.03  0   -0.01"/>
+      <geometry>
+        <box size="0.15 0.07 0.03"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_foot_visual">
+      <origin rpy="-0.7854   1.57079 -0.7854" xyz="0     0    -0.037"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_foot.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_hip_1">
+    <inertial>
+      <mass value="0.754"/>
+      <origin rpy="0  0  0" xyz="0     -0.0782  0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_hip_1_collision">
+      <origin rpy="1.76819 -1.57079  2.76109" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_hip_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_hip_1_visual">
+      <origin rpy="1.76819 -1.57079  2.76109" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_hip_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_hip_2">
+    <inertial>
+      <mass value="0.526"/>
+      <origin rpy="0  0  0" xyz="0       0       0.03045"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_hip_2_collision">
+      <origin rpy="-2.35627 -1.57079  2.35627" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_hip_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_hip_2_visual">
+      <origin rpy="-2.35627 -1.57079  2.35627" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_hip_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_hip_3">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__r_upper_leg">
+    <inertial>
+      <mass value="2.175"/>
+      <origin rpy="0  0  0" xyz="0.00144 -0.15942  0.00039"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="-2.71051e-20" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_upper_leg_collision">
+      <origin rpy="1.57087000e+00  -1.57079000e+00  -7.00000000e-05" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_thigh.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_upper_leg_visual">
+      <origin rpy="1.57087000e+00  -1.57079000e+00  -7.00000000e-05" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_thigh.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_lower_leg">
+    <inertial>
+      <mass value="1.264"/>
+      <origin rpy="0  0  0" xyz="-0.1071   0.00182 -0.00211"/>
+      <inertia ixx="0.01" ixy="5.42101e-20" ixz="-5.42101e-20" iyy="0.01" iyz="8.47033e-22" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_lower_leg_collision">
+      <origin rpy="3.14159  0       1.5708" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_shank.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_lower_leg_visual">
+      <origin rpy="3.14159  0       1.5708" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_shank.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_ankle_1">
+    <inertial>
+      <mass value="0.746"/>
+      <origin rpy="0  0  0" xyz="-0.0054   0.00163 -0.0172"/>
+      <inertia ixx="0.01" ixy="-1.69407e-21" ixz="1.35525e-20" iyy="0.01" iyz="3.38813e-21" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_ankle_1_collision">
+      <origin rpy="-1.5708  0      0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_ankle_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_ankle_1_visual">
+      <origin rpy="-1.5708  0      0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_ankle_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_ankle_2">
+    <inertial>
+      <mass value="0.2675"/>
+      <origin rpy="0  0  0" xyz="0     0     0.037"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__r_foot">
+    <inertial>
+      <mass value="0.5935"/>
+      <origin rpy="0  0  0" xyz="0.02406  0.00061 -0.02841"/>
+      <inertia ixx="0.01" ixy="4.51893e-06" ixz="0.000567784" iyy="0.01" iyz="6.62535e-07" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_foot_collision">
+      <origin rpy="0  0  0" xyz="0.03  0   -0.01"/>
+      <geometry>
+        <box size="0.15 0.07 0.03"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_foot_visual">
+      <origin rpy="-2.81983  1.57079  0.32176" xyz="0     0    -0.037"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_foot.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__torso_1">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.01" ixy="-4.263e-05" ixz="-3.889e-08" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__torso_1_collision">
+      <origin rpy="-1.5708  0      0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_lap_belt_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__torso_1_visual">
+      <origin rpy="-1.5708  0      0" xyz="0  0  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_lap_belt_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__torso_2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.01" ixy="-1.923e-06" ixz="5.095e-05" iyy="0.01" iyz="-3.849e-07" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__chest">
+    <inertial>
+      <mass value="4.81"/>
+      <origin rpy="0  0  0" xyz="0.00222  0.075    0"/>
+      <inertia ixx="0.07472" ixy="-3.6e-06" ixz="-4.705e-05" iyy="0.08145" iyz="0.004567" izz="0.01306"/>
+    </inertial>
+    <collision name="iCub__chest_collision">
+      <origin rpy="-1.10717 -1.57079  2.67798" xyz="-0.0055  0      0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_chest.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__chest_visual">
+      <origin rpy="-1.10717 -1.57079  2.67798" xyz="-0.0055  0      0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_chest.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_shoulder_1">
+    <inertial>
+      <mass value="0.189"/>
+      <origin rpy="0  0  0" xyz="0       0.0187  -0.00119"/>
+      <inertia ixx="0.01" ixy="9e-09" ixz="0" iyy="0.01" iyz="-1.7e-08" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_shoulder_1_collision">
+      <origin rpy="-0.30106  1.57079 -1.87186" xyz="0       0.10928 -0.00521"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_shoulder_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_shoulder_1_visual">
+      <origin rpy="-0.30106  1.57079 -1.87186" xyz="0       0.10928 -0.00521"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_shoulder_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_shoulder_2">
+    <inertial>
+      <mass value="0.179"/>
+      <origin rpy="0  0  0" xyz="9.00000000e-05  -6.27000000e-03   1.66000000e-02"/>
+      <inertia ixx="0.01" ixy="4.66e-07" ixz="3.65e-07" iyy="0.01" iyz="-2.0524e-05" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_shoulder_2_collision">
+      <origin rpy="-2.14033  1.57079 -0.56953" xyz="-0.00154 -0.00521  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_shoulder_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_shoulder_2_visual">
+      <origin rpy="-2.14033  1.57079 -0.56953" xyz="-0.00154 -0.00521  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_shoulder_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_shoulder_3">
+    <inertial>
+      <mass value="0.156157"/>
+      <origin rpy="0  0  0" xyz="5.59000000e-03   9.00000000e-05   5.01300000e-02"/>
+      <inertia ixx="0.01" ixy="-5.662e-08" ixz="-4.3618e-06" iyy="0.01" iyz="-7.42844e-07" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__l_upper_arm">
+    <inertial>
+      <mass value="0.727843"/>
+      <origin rpy="0  0  0" xyz="-1.50000000e-04  -9.00000000e-05   2.98000000e-02"/>
+      <inertia ixx="0.01" ixy="-1.08e-06" ixz="-2.29e-06" iyy="0.01" iyz="3.57e-06" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_upper_arm_collision">
+      <origin rpy="0     0    -1.309" xyz="-0.02043  0.00014 -0.068"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_arm.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_upper_arm_visual">
+      <origin rpy="0     0    -1.309" xyz="-0.02043  0.00014 -0.068"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_arm.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_elbow_1">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="-0.0013   0.00371 -0.00105"/>
+      <inertia ixx="0.01" ixy="-5.15e-07" ixz="-4.08e-07" iyy="0.01" iyz="-3.71e-07" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__l_forearm">
+    <inertial>
+      <mass value="0.525"/>
+      <origin rpy="0  0  0" xyz="0.00034  0.066    0.00476"/>
+      <inertia ixx="0.01" ixy="4.337e-06" ixz="2.39e-07" iyy="0.01" iyz="1.9381e-05" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_forearm_collision">
+      <origin rpy="-2.66395  1.57079 -1.09315" xyz="-0.00014  0       0.02043"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_forearm.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_forearm_visual">
+      <origin rpy="-2.66395  1.57079 -1.09315" xyz="-0.00014  0       0.02043"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_forearm.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__l_wrist_1">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__l_hand">
+    <inertial>
+      <mass value="0.213"/>
+      <origin rpy="0  0  0" xyz="0.07023 -0.00805 -0.007"/>
+      <inertia ixx="0.01" ixy="1.278e-05" ixz="4.823e-06" iyy="0.01" iyz="-1.8188e-05" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__l_hand_collision">
+      <origin rpy="0  0  0" xyz="0       0.02043 -0.00014"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_l_hand.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__l_hand_visual">
+      <origin rpy="0  0  0" xyz="0       0.02043 -0.00014"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_l_hand.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__neck_1">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__neck_1_collision">
+      <origin rpy="3.14159 -1.57079  1.5708" xyz="0      0     -0.0055"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_neck_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__neck_1_visual">
+      <origin rpy="3.14159 -1.57079  1.5708" xyz="0      0     -0.0055"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_neck_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__neck_2">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__neck_2_collision">
+      <origin rpy="-3.14157 -1.57079 -1.57082" xyz="0      0.0055  0.0235"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_neck_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__neck_2_visual">
+      <origin rpy="-3.14157 -1.57079 -1.57082" xyz="0      0.0055  0.0235"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_neck_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__head">
+    <inertial>
+      <mass value="3"/>
+      <origin rpy="0  0  0" xyz="0.0185 -0.1108  0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__head_collision">
+      <origin rpy="-1.32582  1.57079 -2.89662" xyz="0.00449 -0.0235   0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_head.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__head_visual">
+      <origin rpy="-2.89662  1.57079 -2.89662" xyz="0.00449 -0.0235   0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_head_without_eyes.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__eyes_tilt_link">
+    <inertial>
+      <mass value="0.01"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  <link name="iCub__left_eye_link">
+    <inertial>
+      <mass value="0.01"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual name="iCub__left_eye_visual">
+      <origin rpy="0  0  0" xyz="0.055  0.033 -0.14"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_eye.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__right_eye_link">
+    <inertial>
+      <mass value="0.01"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual name="iCub__right_eye_visual">
+      <origin rpy="0  0  0" xyz="0.055  0.033 -0.14"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_eye.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_shoulder_1">
+    <inertial>
+      <mass value="0.189"/>
+      <origin rpy="0  0  0" xyz="0       0.0187   0.00119"/>
+      <inertia ixx="0.01" ixy="2.1e-08" ixz="-1e-09" iyy="0.01" iyz="4.22e-06" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_shoulder_1_collision">
+      <origin rpy="3.06003  1.57079 -1.65235" xyz="0       0.10928  0.00521"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_shoulder_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_shoulder_1_visual">
+      <origin rpy="3.06003  1.57079 -1.65235" xyz="0       0.10928  0.00521"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_shoulder_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_shoulder_2">
+    <inertial>
+      <mass value="0.179"/>
+      <origin rpy="0  0  0" xyz="-9.00000000e-05  -6.27000000e-03  -1.66000000e-02"/>
+      <inertia ixx="0.01" ixy="-4.53e-07" ixz="2.03e-07" iyy="0.01" iyz="2.07e-05" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_shoulder_2_collision">
+      <origin rpy="-1.00125 -1.57079  2.57205" xyz="-0.00154 -0.00521  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_shoulder_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_shoulder_2_visual">
+      <origin rpy="-1.00125 -1.57079  2.57205" xyz="-0.00154 -0.00521  0"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_shoulder_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_shoulder_3">
+    <inertial>
+      <mass value="0.155"/>
+      <origin rpy="0  0  0" xyz="5.53000000e-03  -2.00000000e-05   4.93900000e-02"/>
+      <inertia ixx="0.01" ixy="3.56977e-07" ixz="-3.95372e-06" iyy="0.01" iyz="-6.5128e-06" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__r_upper_arm">
+    <inertial>
+      <mass value="0.729"/>
+      <origin rpy="0  0  0" xyz="-1.50000000e-04   8.00000000e-05   2.98800000e-02"/>
+      <inertia ixx="0.01" ixy="-1.08e-06" ixz="-2.29e-06" iyy="0.01" iyz="3.57e-06" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_upper_arm_collision">
+      <origin rpy="-3.14159  0       1.309" xyz="-0.02043 -0.00014 -0.068"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_arm.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_upper_arm_visual">
+      <origin rpy="-3.14159  0       1.309" xyz="-0.02043 -0.00014 -0.068"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_arm.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_elbow_1">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0.0013  -0.00371  0.00105"/>
+      <inertia ixx="0.01" ixy="-5.02e-07" ixz="-3.99e-07" iyy="0.01" iyz="-3.71e-07" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__r_forearm">
+    <inertial>
+      <mass value="0.525"/>
+      <origin rpy="0  0  0" xyz="-0.00034 -0.066   -0.00476"/>
+      <inertia ixx="0.01" ixy="5.66e-06" ixz="1.4e-06" iyy="0.01" iyz="1.82e-05" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_forearm_collision">
+      <origin rpy="-1.74165  1.57079 -0.17086" xyz="0.00014  0      -0.02043"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_forearm.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_forearm_visual">
+      <origin rpy="-1.74165  1.57079 -0.17086" xyz="0.00014  0      -0.02043"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_forearm.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="iCub__r_wrist_1">
+    <inertial>
+      <mass value="0.1"/>
+      <origin rpy="0  0  0" xyz="0  0  0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+  <link name="iCub__r_hand">
+    <inertial>
+      <mass value="0.213"/>
+      <origin rpy="0  0  0" xyz="0.07023 -0.00805  0.007"/>
+      <inertia ixx="0.01" ixy="1.26e-05" ixz="-6.08e-06" iyy="0.01" iyz="1.76e-05" izz="0.01"/>
+    </inertial>
+    <collision name="iCub__r_hand_collision">
+      <origin rpy="0       0      -3.14159" xyz="0       0.02043  0.00014"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/collision/icub_simple_collision_r_hand.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="iCub__r_hand_visual">
+      <origin rpy="0       0      -3.14159" xyz="0       0.02043  0.00014"/>
+      <geometry>
+        <mesh filename="package://icub-gazebo/icub/meshes/visual/icub_r_hand.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>
