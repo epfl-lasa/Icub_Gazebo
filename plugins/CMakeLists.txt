@@ -10,6 +10,7 @@ add_subdirectory(multicamera)
 add_subdirectory(maissensor)
 add_subdirectory(showmodelzmp)
 add_subdirectory(loadurdf)
+add_subdirectory(sdfastcomputation)
 
 
 find_package(OpenCV QUIET)

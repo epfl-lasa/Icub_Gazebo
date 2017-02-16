@@ -42,28 +42,19 @@
 #include <yarp/os/ResourceFinder.h>
 #include <yarp/os/LogStream.h>
 
-// iDynTree headers
-#include <iCub/iDynTree/DynTree.h>
-#include <urdf_exception/exception.h>
-#include <iDynTree/Model/Link.h>
-#include <iDynTree/Model/Model.h>
+#include <thread>
 
-#include <iDynTree/Model/LinkState.h>
-#include <iDynTree/Core/SpatialInertia.h>
+#include "sg_filter.h"
 
- #include <iCub/iDynTree/yarp_kdl.h>
- #include <iCub/iDynTree/yarp_iDynTree.h>
-
-
-#include <iDynTree/KinDynComputations.h>
-#include <iDynTree/Core/SpatialInertiaRaw.h>
-#include <iDynTree/HighLevel/DynamicsComputations.h>
-#include <iDynTree/Core/SpatialInertia.h>
-
+	int order = 2;
+	int winlen = 11	;
+	int dim = 3 * 82 ;
+	SGF::real sample_time = 1e-3; // this is simply a float or double, you can change it in the header sg_filter.h if yo u want
+	SGF::SavitzkyGolayFilter filter(dim,order, winlen, sample_time);
+	SGF::SavitzkyGolayFilter filter_w(dim,order, winlen, sample_time);
 
 
 using namespace std;
-using namespace iDynTree::HighLevel;
 
 
 namespace gazebo
@@ -126,6 +117,8 @@ private:
 	yarp::os::Property      m_iniParams;
 	gazebo::transport::NodePtr m_node;
 
+	void 		Thread_example();
+
 	gazebo::physics::ModelPtr       m_myModel;
 
 	std::string             m_modelScope;
@@ -137,13 +130,13 @@ private:
 	yarp::os::BufferedPort<yarp::os::Bottle> *m_zmpOutputPort;
 	yarp::os::BufferedPort<yarp::os::Bottle>   m_ExternalCmdInput;
 	yarp::os::BufferedPort<yarp::os::Bottle>   m_LinkPosInput;
-	yarp::os::Port 			   m_AngularMomentum;
-    yarp::os::BufferedPort<yarp::os::Bottle> *m_AngularMomentumB;
+//	yarp::os::Port 			   m_test_data;
+
+	yarp::os::BufferedPort<yarp::os::Bottle> *m_test_data;
 
 
-
-
-	iCub::iDynTree::DynTree		ICUB_ROBOT_TREE;
+	//iCub::iDynTree::DynTree		   ICUB_ROBOT_TREE;
+	//KDL::CoDyCo::UndirectedTree    iCubTree;
 	//iDynTree::Model				m_ICUB_NEW_MODEL ;
 	//KDL::CoDyCo::UndirectedTree m_robot_model;
 	//iDynTree::HighLevel::DynamicsComputations dynComp ;
@@ -158,6 +151,13 @@ private:
 	bool open_file = true ;
 	bool check = true ;
 	double m_count;
+
+		std::thread* the_thread ;
+
+		gazebo::math::Vector3  link_m_a ;
+
+		yarp::os::Bottle	 bot_test;
+
 
 
 };

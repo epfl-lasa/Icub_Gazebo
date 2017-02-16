@@ -83,13 +83,6 @@ void ApplyExternalWrench::UpdateChild()
 	}
 
 
-	//  This piece of code shows the full name (scoped name + link name) of every link in the current loaded model.
-	//     gazebo::physics::Link_V tmpLinksVector;
-	//     tmpLinksVector = m_myModel->GetLinks();
-	//     for (int i=0; i<tmpLinksVector.size(); i++)
-	//     yDebug() << tmpLinksVector[i]->GetName() << " ";
-	//     yDebug() << std::endl;
-
 	if ( !this->m_onLink ) {
 		//yError() << "ApplyWrench plugin: link named " << this->m_linkName<< " not found";
 		return;
@@ -106,10 +99,6 @@ void ApplyExternalWrench::UpdateChild()
 	static bool applying_force_flag = 0;
 
 	double time_current = yarp::os::Time::now();
-
-
-
-
 
 
 
@@ -266,9 +255,7 @@ void ApplyExternalWrench::Load ( physics::ModelPtr _model, sdf::ElementPtr _sdf 
 
 	this->m_modelScope = _model->GetScopedName();
 
-
-
-    std::string port_name = "/" + this->m_modelScope + "/ExtWrNEDA:o";
+    std::string port_name = "/" + this->m_modelScope + "/ExtWrench:o";
 
 
 	m_ExtWrOutputPort = new yarp::os::BufferedPort<yarp::os::Bottle>();

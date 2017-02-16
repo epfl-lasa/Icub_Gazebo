@@ -191,6 +191,7 @@ m_count = 1.0 ;
 
 	//const iDynTree::Model & model = urdf_kindyncomp.getRobotModel();
 
+
 	//cout << "x_com   "<< urdf_dyncomp.getCenterOfMass()(0)<<  "   y_com"<<urdf_dyncomp.getCenterOfMass()(1) <<"   z_com " <<urdf_dyncomp.getCenterOfMass()(2) << endl ;
 
 	//urdf_dyncomp.getr

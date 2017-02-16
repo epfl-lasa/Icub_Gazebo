@@ -16,7 +16,8 @@ find_package(SDFormat REQUIRED)
 find_package(OGRE QUIET)
 
 # Add Gazebo CXX flags, to support Gazebo 6 reckless dependency on C++11
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 ${GAZEBO_CXX_FLAGS} ")
+set(CMAKE_C_FLAGS          "${CMAKE_C_FLAGS} -O2")
 
 # add local cmake scripts
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)

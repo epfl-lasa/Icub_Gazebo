@@ -17,7 +17,7 @@
 
 namespace gazebo
 {
-    class ShowModelCoM;
+    class SDFASTComputation;
 
     namespace transport {
         class Publisher;
@@ -56,11 +56,11 @@ class Port;
 }
 
 
-class gazebo::ShowModelCoM : public gazebo::ModelPlugin
+class gazebo::SDFASTComputation : public gazebo::ModelPlugin
 {
 public:
-    ShowModelCoM();
-    virtual ~ShowModelCoM();
+    SDFASTComputation();
+    virtual ~SDFASTComputation();
 
     std::string retrieveSubscope(gazebo::physics::Link_V& v, std::string  scope);
 
@@ -70,8 +70,8 @@ protected:
     // Inherited
     virtual void UpdateChild();
 
-private:
-    yarp::os::Port			m_readExtWr;
+//private:
+
     gazebo::transport::NodePtr m_node;
     gazebo::transport::NodePtr m_new_node;
 
@@ -81,15 +81,7 @@ private:
     std::string             m_modelScope;
     gazebo::event::ConnectionPtr    m_updateConnection;
 
-    gazebo::transport::PublisherPtr m_visPub;
-    gazebo::transport::PublisherPtr m_visnewPub;
 
-    gazebo::msgs::Visual            m_visualMsg;
-    gazebo::msgs::Visual            m_newvisualMsg;
-
-    yarp::os::BufferedPort<yarp::os::Bottle> *m_comOutputPort;
-    yarp::os::BufferedPort<yarp::os::Bottle> *m_comProjOutputPort;
-    
 };
 
 #endif
