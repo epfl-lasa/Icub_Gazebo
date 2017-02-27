@@ -1,0 +1,322 @@
+[INFO]created device <gazebo_imu>. See C++ class GazeboYarpIMUDriver for documentation.
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]Server Inertial : no ROS initialization required 
+[INFO]Starting server Inertial thread
+[DEBUG]Writing an Inertial measurement.
+[INFO]created wrapper <inertial>. See C++ class yarp::dev::ServerInertial for documentation.
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]AnalogServer : no ROS initialization required 
+[INFO]created wrapper <analogServer>. See C++ class yarp::dev::AnalogWrapper for documentation.
+[INFO]created device <gazebo_forcetorque>. See C++ class GazeboYarpForceTorqueDriver for documentation.
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]AnalogServer : no ROS initialization required 
+[INFO]created wrapper <analogServer>. See C++ class yarp::dev::AnalogWrapper for documentation.
+[INFO]created device <gazebo_forcetorque>. See C++ class GazeboYarpForceTorqueDriver for documentation.
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]AnalogServer : no ROS initialization required 
+[INFO]created wrapper <analogServer>. See C++ class yarp::dev::AnalogWrapper for documentation.
+[INFO]created device <gazebo_forcetorque>. See C++ class GazeboYarpForceTorqueDriver for documentation.
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]AnalogServer : no ROS initialization required 
+[INFO]created wrapper <analogServer>. See C++ class yarp::dev::AnalogWrapper for documentation.
+[INFO]created device <gazebo_forcetorque>. See C++ class GazeboYarpForceTorqueDriver for documentation.
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]AnalogServer : no ROS initialization required 
+[INFO]created wrapper <analogServer>. See C++ class yarp::dev::AnalogWrapper for documentation.
+[INFO]created device <gazebo_forcetorque>. See C++ class GazeboYarpForceTorqueDriver for documentation.
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]AnalogServer : no ROS initialization required 
+[INFO]created wrapper <analogServer>. See C++ class yarp::dev::AnalogWrapper for documentation.
+[INFO]created device <gazebo_forcetorque>. See C++ class GazeboYarpForceTorqueDriver for documentation.
+[INFO]/icubGazeboSim/torso : no ROS initialization required 
+[INFO]/icubGazeboSim/torso  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  torso_yaw torso_yaw 
+[DEBUG]found:  torso_roll torso_roll 
+[DEBUG]found:  torso_pitch torso_pitch 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/head : no ROS initialization required 
+[INFO]/icubGazeboSim/head  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  neck_pitch neck_pitch 
+[DEBUG]found:  neck_roll neck_roll 
+[DEBUG]found:  neck_yaw neck_yaw 
+[DEBUG]found:  eyes_tilt eyes_tilt 
+[DEBUG]found:  left_eye left_eye 
+[DEBUG]found:  right_eye right_eye 
+[DEBUG]Requested couplings: COUPLING (eyes_vergence_control (4 5) (eyes_version eyes_vergence)) 
+[DEBUG]Size:  2 
+[INFO]using eyes_vergence_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/left_leg : no ROS initialization required 
+[INFO]/icubGazeboSim/left_leg  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  l_hip_pitch l_hip_pitch 
+[DEBUG]found:  l_hip_roll l_hip_roll 
+[DEBUG]found:  l_hip_yaw l_hip_yaw 
+[DEBUG]found:  l_knee l_knee 
+[DEBUG]found:  l_ankle_pitch l_ankle_pitch 
+[DEBUG]found:  l_ankle_roll l_ankle_roll 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/right_leg : no ROS initialization required 
+[INFO]/icubGazeboSim/right_leg  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  r_hip_pitch r_hip_pitch 
+[DEBUG]found:  r_hip_roll r_hip_roll 
+[DEBUG]found:  r_hip_yaw r_hip_yaw 
+[DEBUG]found:  r_knee r_knee 
+[DEBUG]found:  r_ankle_pitch r_ankle_pitch 
+[DEBUG]found:  r_ankle_roll r_ankle_roll 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/left_arm_no_hand : no ROS initialization required 
+[INFO]/icubGazeboSim/left_arm_no_hand  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  l_shoulder_pitch l_shoulder_pitch 
+[DEBUG]found:  l_shoulder_roll l_shoulder_roll 
+[DEBUG]found:  l_shoulder_yaw l_shoulder_yaw 
+[DEBUG]found:  l_elbow l_elbow 
+[DEBUG]found:  l_wrist_prosup l_wrist_prosup 
+[DEBUG]found:  l_wrist_pitch l_wrist_pitch 
+[DEBUG]found:  l_wrist_yaw l_wrist_yaw 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]INITIAL CONFIGURATION IS:  -0.520000	 0.520000	 0.000000	 0.785000	 0.000000	 0.000000	 0.698000 
+[DEBUG]Initializing Trajectory Generator with default values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/left_hand_thumb : no ROS initialization required 
+[INFO]/icubGazeboSim/left_hand_thumb  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  l_hand::l_tj2 l_tj2 
+[DEBUG]found:  l_hand::l_tj4 l_tj4 
+[DEBUG]found:  l_hand::l_tj5 l_tj5 
+[DEBUG]found:  l_hand::l_tj6 l_tj6 
+[DEBUG]Requested couplings: COUPLING (thumb_control (0 1 2 3) (l_thumb_oppose l_thumb_proximal l_thumb_distal reserved)) 
+[DEBUG]Size:  2 
+[INFO]using thumb_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/left_hand_index : no ROS initialization required 
+[INFO]/icubGazeboSim/left_hand_index  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  l_hand::l_aij3 l_aij3 
+[DEBUG]found:  l_hand::l_aij4 l_aij4 
+[DEBUG]found:  l_hand::l_aij5 l_aij5 
+[DEBUG]Requested couplings: COUPLING (index_control (0 1 2) (l_index_proximal l_index_distal reserved)) 
+[DEBUG]Size:  2 
+[INFO]using index_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/left_hand_middle : no ROS initialization required 
+[INFO]/icubGazeboSim/left_hand_middle  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  l_hand::l_mj3 l_mj3 
+[DEBUG]found:  l_hand::l_mj4 l_mj4 
+[DEBUG]found:  l_hand::l_mj5 l_mj5 
+[DEBUG]Requested couplings: COUPLING (middle_control (0 1 2) (l_middle_proximal l_middle_distal reserved)) 
+[DEBUG]Size:  2 
+[INFO]using middle_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/left_hand_pinky : no ROS initialization required 
+[INFO]/icubGazeboSim/left_hand_pinky  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  l_hand::l_lij3 l_lij3 
+[DEBUG]found:  l_hand::l_lij4 l_lij4 
+[DEBUG]found:  l_hand::l_lij5 l_lij5 
+[DEBUG]found:  l_hand::l_rij3 l_rij3 
+[DEBUG]found:  l_hand::l_rij4 l_rij4 
+[DEBUG]found:  l_hand::l_rij5 l_rij5 
+[DEBUG]Requested couplings: COUPLING (pinky_control (0 1 2 3 4 5) (l_pinky reserved reserved reserved reserved reserved)) 
+[DEBUG]Size:  2 
+[INFO]using pinky_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/left_hand_finger : no ROS initialization required 
+[INFO]/icubGazeboSim/left_hand_finger  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  l_hand::l_aij6 l_aij6 
+[DEBUG]found:  l_hand::l_mj6 l_mj6 
+[DEBUG]found:  l_hand::l_rij6 l_rij6 
+[DEBUG]found:  l_hand::l_lij6 l_lij6 
+[DEBUG]Requested couplings: COUPLING (fingers_abduction_control (0 1 2 3) (l_hand_fingers reserved reserved reserved reserved)) 
+[DEBUG]Size:  2 
+[INFO]using fingers_abduction_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/left_hand : no ROS initialization required 
+[INFO]/icubGazeboSim/left_hand  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[INFO]/icubGazeboSim/right_arm_no_hand : no ROS initialization required 
+[INFO]/icubGazeboSim/right_arm_no_hand  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  r_shoulder_pitch r_shoulder_pitch 
+[DEBUG]found:  r_shoulder_roll r_shoulder_roll 
+[DEBUG]found:  r_shoulder_yaw r_shoulder_yaw 
+[DEBUG]found:  r_elbow r_elbow 
+[DEBUG]found:  r_wrist_prosup r_wrist_prosup 
+[DEBUG]found:  r_wrist_pitch r_wrist_pitch 
+[DEBUG]found:  r_wrist_yaw r_wrist_yaw 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]INITIAL CONFIGURATION IS:  -0.520000	 0.520000	 0.000000	 0.785000	 0.000000	 0.000000	 0.698000 
+[DEBUG]Initializing Trajectory Generator with default values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/right_hand_thumb : no ROS initialization required 
+[INFO]/icubGazeboSim/right_hand_thumb  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  r_hand::r_tj2 r_tj2 
+[DEBUG]found:  r_hand::r_tj4 r_tj4 
+[DEBUG]found:  r_hand::r_tj5 r_tj5 
+[DEBUG]found:  r_hand::r_tj6 r_tj6 
+[DEBUG]Requested couplings: COUPLING (thumb_control (0 1 2 3) (r_thumb_oppose r_thumb_proximal r_thumb_distal reserved)) 
+[DEBUG]Size:  2 
+[INFO]using thumb_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/right_hand_index : no ROS initialization required 
+[INFO]/icubGazeboSim/right_hand_index  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  r_hand::r_aij3 r_aij3 
+[DEBUG]found:  r_hand::r_aij4 r_aij4 
+[DEBUG]found:  r_hand::r_aij5 r_aij5 
+[DEBUG]Requested couplings: COUPLING (index_control (0 1 2) (r_index_proximal r_index_distal reserved)) 
+[DEBUG]Size:  2 
+[INFO]using index_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/right_hand_middle : no ROS initialization required 
+[INFO]/icubGazeboSim/right_hand_middle  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  r_hand::r_mj3 r_mj3 
+[DEBUG]found:  r_hand::r_mj4 r_mj4 
+[DEBUG]found:  r_hand::r_mj5 r_mj5 
+[DEBUG]Requested couplings: COUPLING (middle_control (0 1 2) (r_middle_proximal r_middle_distal reserved)) 
+[DEBUG]Size:  2 
+[INFO]using middle_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/right_hand_pinky : no ROS initialization required 
+[INFO]/icubGazeboSim/right_hand_pinky  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  r_hand::r_lij3 r_lij3 
+[DEBUG]found:  r_hand::r_lij4 r_lij4 
+[DEBUG]found:  r_hand::r_lij5 r_lij5 
+[DEBUG]found:  r_hand::r_rij3 r_rij3 
+[DEBUG]found:  r_hand::r_rij4 r_rij4 
+[DEBUG]found:  r_hand::r_rij5 r_rij5 
+[DEBUG]Requested couplings: COUPLING (pinky_control (0 1 2 3 4 5) (r_pinky reserved reserved reserved reserved reserved)) 
+[DEBUG]Size:  2 
+[INFO]using pinky_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/right_hand_finger : no ROS initialization required 
+[INFO]/icubGazeboSim/right_hand_finger  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[DEBUG]found:  r_hand::r_aij6 r_aij6 
+[DEBUG]found:  r_hand::r_mj6 r_mj6 
+[DEBUG]found:  r_hand::r_rij6 r_rij6 
+[DEBUG]found:  r_hand::r_lij6 r_lij6 
+[DEBUG]Requested couplings: COUPLING (fingers_abduction_control (0 1 2 3) (r_hand_fingers reserved reserved reserved reserved)) 
+[DEBUG]Size:  2 
+[INFO]using fingers_abduction_control 
+[DEBUG]done 
+[DEBUG]min_stiffness: [   0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_stiffness: [   1000.000000	 1000.000000	 1000.000000	 1000.000000  ] 
+[DEBUG]min_damping: [   0.000000	 0.000000	 0.000000	 0.000000  ] 
+[DEBUG]max_damping: [   100.000000	 100.000000	 100.000000	 100.000000  ] 
+[DEBUG]Initializing Trajectory Generator with current values 
+[INFO]created device <gazebo_controlboard>. See C++ class GazeboYarpControlBoardDriver for documentation.
+[INFO]/icubGazeboSim/right_hand : no ROS initialization required 
+[INFO]/icubGazeboSim/right_hand  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[INFO]/icubGazeboSim/left_arm : no ROS initialization required 
+[INFO]/icubGazeboSim/left_arm  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[INFO]/icubGazeboSim/right_arm : no ROS initialization required 
+[INFO]/icubGazeboSim/right_arm  initting YARP initialization 
+[INFO]created wrapper <controlboardwrapper2>. See C++ class yarp::dev::ControlBoardWrapper2 for documentation.
+[INFO]GazeboYarpMaisSensor: Found yarpConfigurationFile: loading from  /home/neda/iCube/icub-gazebo/icub/conf/gazebo_icub_left_hand_mais.ini 
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]AnalogServer : no ROS initialization required 
+[INFO]created wrapper <analogServer>. See C++ class yarp::dev::AnalogWrapper for documentation.
+[INFO]created device <gazebo_maissensor>. See C++ class GazeboYarpMaisSensorDriver for documentation.
+[INFO]GazeboYarpMaisSensor: Found yarpConfigurationFile: loading from  /home/neda/iCube/icub-gazebo/icub/conf/gazebo_icub_right_hand_mais.ini 
+[INFO]No ROS group found in config file ... skipping ROS initialization. 
+[INFO]AnalogServer : no ROS initialization required 
+[INFO]created wrapper <analogServer>. See C++ class yarp::dev::AnalogWrapper for documentation.
+[INFO]created device <gazebo_maissensor>. See C++ class GazeboYarpMaisSensorDriver for documentation.

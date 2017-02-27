@@ -1,0 +1,33 @@
+<!--
+  Copyright (C) 2007-2013 Istituto Italiano di Tecnologia ADVR & iCub Facility
+  Authors: Mingo Enrico, Alessio Rocchi, Mirko Ferrati, Silvio Traversaro and Alessandro Settimi
+  CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT
+-->
+
+<?xml version="1.0"?>
+<sdf version="1.4">
+  <world name="default">
+
+    <!-- Light -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- iCub -->
+    <include>
+        <uri>model://icub_with_hands</uri>
+        <plugin name="ShowModelCOM" filename="libgazebo_yarp_showmodelcom.so"/>
+	 <plugin name="ApplyExternalWrench" filename="libgazebo_yarp_externalwrench.so"/>	
+        <plugin name="ShowModelZMP" filename="libgazebo_yarp_showmodelzmp.so"/> 
+	<plugin name="SDFASTComputation" filename="libgazebo_yarp_sdfastcomputation.so"/> 
+       
+     <!-- <plugin name="LoadURDF" filename="libgazebo_yarp_loadurdf.so"/>  -->
+    </include>
+   
+  </world>
+</sdf>
