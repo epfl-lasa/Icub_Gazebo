@@ -4,7 +4,7 @@ In order to add a new plugin, in addition to write a spesific "CMakeLists.txt" r
 ```
 add_subdirectory(showmodelzmp)
 ```
-Also, following line should be included in icub.world (iCub/icub-gazebo/world/icub.world) 
+Also, following line should be included in [icub.world](iCub/icub-gazebo/world/icub.world). 
 ```
 <plugin name="........." filename="libgazebo_yarp_.........so"/> 
 ```
