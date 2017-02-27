@@ -1,57 +1,35 @@
-# Copyright (C) 2007-2015 Istituto Italiano di Tecnologia ADVR & iCub Facility & RBCS Department
-# Authors: Enrico Mingo, Alessio Rocchi, Mirko Ferrati, Silvio Traversaro, Alessandro Settimi and Francesco Romano
-# CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT
+add_subdirectory(camera)
+add_subdirectory(clock)
+add_subdirectory(controlboard)
+add_subdirectory(externalwrench)
+add_subdirectory(forcetorque)
+add_subdirectory(imu)
+add_subdirectory(jointsensors)
+add_subdirectory(showmodelcom)
+add_subdirectory(multicamera)
+add_subdirectory(maissensor)
+add_subdirectory(showmodelzmp)
+add_subdirectory(loadurdf)
+add_subdirectory(sdfastcomputation)
 
-cmake_minimum_required(VERSION 2.8.7)
 
-PROJECT(GazeboYarpPlugins)
+find_package(OpenCV QUIET)
+option(GAZEBO_YARP_PLUGINS_HAS_OPENCV "Compile plugins that depend on OpenCV" ${OpenCV_FOUND})
 
-find_package(YARP 2.3.64.13 REQUIRED)
-
-# Finding dependencies
-find_package(Boost REQUIRED serialization system)
-find_package(Protobuf REQUIRED)
-find_package(Gazebo   REQUIRED)
-find_package(SDFormat REQUIRED)
-find_package(OGRE QUIET)
-
-# Add Gazebo CXX flags, to support Gazebo 6 reckless dependency on C++11
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 ${GAZEBO_CXX_FLAGS} ")
-set(CMAKE_C_FLAGS          "${CMAKE_C_FLAGS} -O2")
-
-# add local cmake scripts
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
-
-#used for dir suffixes
-include(GNUInstallDirs)
-if (CMAKE_VERSION LESS 3.0)
-    # hack: by default this would be 'lib/x86_64-linux-gnu' on linux
-    set(CMAKE_INSTALL_LIBDIR lib)
+if(GAZEBO_YARP_PLUGINS_HAS_OPENCV)
+    add_subdirectory(videotexture)
+else()
+    message(STATUS "GAZEBO_YARP_PLUGINS_HAS_OPENCV CMake option set to off, disabling videotexture plugin.")
 endif()
 
-OPTION(GAZEBO_YARP_PLUGINS_ENABLE_RPATH "Enable installation with RPATH" TRUE)
-include(AddInstallRPATHSupport)
-add_install_rpath_support(BIN_DIRS ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}
-                          LIB_DIRS ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}
-                          DEPENDS GAZEBO_YARP_PLUGINS_ENABLE_RPATH
-                          USE_LINK_PATH)
+if( GAZEBO_VERSION VERSION_GREATER 3.9 )
+    add_subdirectory(worldinterface)
+else()
+    message(WARNING "Gazebo version is lower than 4.0, disabling worldinterface plugin.")
+endif()
 
-# Define (depending on CMAKE_BUILD_TYPE) the DEBUG macro
-include(AddDebugMacro)
-
-# Enable all possible warning if CMAKE_BUILD_TYPE is debug
-include(AddDebugWarnings)
-
-#this is required for all plugins
-link_directories(${GAZEBO_LIBRARY_DIRS} ${SDFORMAT_LIBRARY_DIRS} ${PROTOBUF_LIBRARY_DIRS})
-
-
-#build common libraries first
-add_subdirectory(libraries)
-#build RPC libraries
-add_subdirectory(thrift)
-#now build plugins
-add_subdirectory(plugins)
-
-
-include(AddUninstallTarget)
+if( NOT (GAZEBO_VERSION VERSION_LESS 6) )
+    add_subdirectory(lasersensor)
+else()
+    message(STATUS "Gazebo version is lower than 6, disabling  lasersensor plugin.")
+endif()
