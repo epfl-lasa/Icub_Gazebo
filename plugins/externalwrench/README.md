@@ -19,6 +19,7 @@ example:
 
     chest 10 0 0 0 0 0 1.5
 
+This command means that we are applying a force of 10 N in positive x direction, and the contact duration is 1.5 second.
 
 
 
