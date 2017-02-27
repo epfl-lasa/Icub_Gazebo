@@ -12,11 +12,12 @@ In order to apply external wrench to each link, following rpc port should be imp
 
 Then, open a new terminal and use this command:
 
---yarp rpc /iCub/applyExternalWrench/rpc:i 
-target_link_name Fx Fy Fz Mx My Mz t
+    --yarp rpc /iCub/applyExternalWrench/rpc:i 
+    target_link_name Fx Fy Fz Mx My Mz t
 
 example:
-chest 10 0 0 0 0 0 1.5
+
+    chest 10 0 0 0 0 0 1.5
 
 
 
